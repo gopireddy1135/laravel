@@ -13,7 +13,6 @@ pipeline {
                 sh "sudo mv composer.phar /usr/local/bin/composer"
                 sh "composer -V"
                 sh "sudo apt install phpunit -y"
-                sh 
                 sh "phpunit"
                 sh "composer install"
             }
