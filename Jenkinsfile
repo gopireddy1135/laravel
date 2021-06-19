@@ -12,6 +12,9 @@ pipeline {
                 sh "chmod +x composer.phar"
                 sh "sudo mv composer.phar /usr/local/bin/composer"
                 sh "composer -V"
+                sh "sudo apt install phpunit"
+                sh "cd vendor/bin/phpunit"
+                sh "phpunit"
                 sh "composer install"
             }
         }     
