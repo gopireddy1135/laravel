@@ -12,9 +12,6 @@ pipeline {
                 sh "chmod +x composer.phar"
                 sh "sudo mv composer.phar /usr/local/bin/composer"
                 sh "composer -V"
-                sh "sh php artisan key:generate"
-                sh "composer create-project laravel/laravel testlaravelproject"
-                sh "cd testlaravelproject"
                 sh "composer install"
             }
         }     
