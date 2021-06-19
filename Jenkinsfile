@@ -13,6 +13,7 @@ pipeline {
                 sh "sudo mv composer.phar /usr/local/bin/composer"
                 sh "composer -V"
                 sh "sudo apt install phpunit -y"
+                sh "cd /var/lib/jenkins/workspace/testingphp/tests"
                 sh "phpunit"
                 sh "composer install"
             }
